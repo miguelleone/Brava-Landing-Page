@@ -1,0 +1,712 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow: auto;
+    line-height: 1.5;
+}
+
+:root {
+    --blue1: #002A72;
+    --blue2: #45A5FF;
+    --blue3: #92caff;
+    --white: #FFFFFF;
+    --gray1: #DEE2E6;
+    --gray2: #ADB5BD;
+    --gray3: #495057;
+    --betterBlack: #212427;
+    --Black: #000000;
+}
+
+.header {
+    background-image: url(/assets/img/Frame\ 20.png);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 5rem 15rem;
+    text-align: center;
+    gap: 2rem;
+}
+
+.header-logo {
+    height: 3.125rem;
+}
+
+.header-title {
+    font-size: 4.5rem;
+    color: var(--blue1);
+    width: 75%;
+    line-height: 110%;
+}
+
+.header-text {
+    color: var(--blue1);
+    font-size: 1.5rem;
+    max-width: 70%;
+}
+
+.button {
+    background-color: var(--blue2);
+    padding: 1rem 3.5rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    max-width: fit-content;
+    transition-duration: 0.2s;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--blue3);
+    color: var(--blue1);
+}
+
+.servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 15rem;
+    gap: 3rem;
+    color: var(--white);
+    background-color: var(--blue1);
+}
+
+.servicos-coluna {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6.25rem;
+    width: 100%;
+}
+
+.servicos-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.servicos-icon {
+    width: 6rem;
+    height: 6rem;
+}
+
+.conheca-img {
+    display: none;
+}
+
+.conheca {
+    background-image: url("/assets/img/brava-socios.png");
+    padding: 5rem 15rem;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: top 35% right;
+}
+
+.conheca-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.conheca-title {
+    font-size: 2.5rem;
+    color: var(--blue1);
+}
+
+.conheca-text {
+    font-size: 1.5rem;
+    color: var(--blue1);
+    max-width: 55%;
+    width: fit-content;
+}
+
+.faq {
+    background-color: var(--blue1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 15rem;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+}
+
+.accordion {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 0.8rem 2rem;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 2rem;
+    border: none;
+    text-align: start;
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--blue1);
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.accordion:hover {
+    background-color: var(--gray1);
+    color: var(--blue1);
+}
+
+.faq-title {
+    color: var(--white);
+    font-size: 2.5rem;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.arrow {
+    color: var(--blue1);
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.panel {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    display: none;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 5rem 15rem;
+}
+
+.form-title {
+    color: var(--blue1);
+    font-size: 2.5rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 43%;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.input-box input {
+    background-color: var(--gray1);
+    padding: 1.2rem;
+    border: none;
+    border-radius: 0.75rem;
+    transition-duration: 0.2s;
+}
+
+.input-box input:hover {
+    background-color: var(--gray1);
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid var(--gray2);
+}
+
+.large {
+    width: 100%;
+}
+
+.minor {
+    width: 49%;
+}
+
+.input-box label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--blue1);
+}
+
+.input-box input::placeholder {
+    color: var(--betterBlack);
+    font-size: 1.4rem;
+    font-family: inherit;
+}
+
+.button-form {
+    margin-top: 1rem;
+    max-width: 100%;
+}
+
+.title-footer {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--blue1);
+    margin-bottom: 1rem;
+}
+
+.text-footer {
+    font-size: 1.2rem;
+    color: var(--blue1);
+}
+
+.icon-footer {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--blue1);
+    margin-right: 1rem;
+}
+
+.box-footer {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.contact {
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+}
+
+.container-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5rem 15rem 2rem;
+    align-content: start;
+}
+
+.medias {
+    font-size: 2.2rem;
+    margin-right: 1.2rem;
+}
+
+.img-footer {
+    height: 6rem;
+}
+
+.logos-footer {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-self: end;
+}
+
+@media (max-width: 1600px) {
+    .header {
+        padding: 5rem 8rem;
+        gap: 2.8rem;
+    }
+
+    .header-title {
+        font-size: 4rem;
+        line-height: 110%;
+    }
+
+    .servicos {
+        padding: 4rem 8rem;
+        gap: 2rem;
+    }
+
+    .servicos-icon {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .servicos-title {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .servicos-text {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .conheca {
+        padding: 4rem 8rem;
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .img-conheca {
+        overflow: hidden;
+        height: 30rem;
+    }
+
+    .conheca-img {
+        max-width: 100%;
+        display: block;
+        scale: 130%;
+    }
+
+    .conheca-title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .conheca-text {
+        text-align: center;
+        max-width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .conheca-box {
+        align-items: center;
+    }
+
+    .faq {
+        padding: 4rem 8rem;
+    }
+
+    .faq-container {
+        width: 100%;
+    }
+
+    .form {
+        padding: 4rem 20rem;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .container-footer {
+        padding: 3rem 8rem;
+    }
+
+    .img-footer {
+        height: 4.5rem;
+    }
+
+    .text-footer {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .medias-footer {
+        text-align: center;
+    }
+
+    .icon-footer {
+        line-height: 1.5;
+        margin-right: 0.3rem;
+        font-size: 1rem
+    }
+
+    .medias-mobile {
+        font-size: 2.5rem;
+        margin: 0 0.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .header {
+        padding: 3rem 5rem;
+        gap: 1.8rem;
+    }
+
+    .header-title {
+        font-size: 3.4rem;
+        line-height: 110%;
+    }
+
+    .servicos {
+        padding: 3rem 5rem;
+        gap: 2rem;
+    }
+
+    .servicos-icon {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .servicos-title {
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    .servicos-text {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .conheca {
+        padding: 3rem 5rem;
+        background-image: none;
+    }
+
+    .img-conheca {
+        height: 20rem;
+        overflow: hidden;
+    }
+
+    .conheca-img {
+        visibility: visible;
+        max-width: 100%;
+        display: block;
+    }
+
+    .conheca-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .conheca-text {
+        text-align: center;
+        max-width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .conheca-box {
+        align-items: center;
+    }
+
+    .faq {
+        padding: 3rem 5rem;
+    }
+
+    .faq-container {
+        width: 100%;
+    }
+
+    .form {
+        padding: 3rem 5rem;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .container-footer {
+        padding: 3rem 2rem;
+    }
+
+    .img-footer {
+        height: 4rem;
+    }
+
+    .title-footer {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--blue1);
+        margin-bottom: 0.8rem;
+    }
+
+    .text-footer {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .medias-footer {
+        text-align: center;
+    }
+
+    .icon-footer {
+        line-height: 1.5;
+        margin-right: 0.3rem;
+        font-size: 1rem
+    }
+
+    .medias-mobile {
+        font-size: 2rem;
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 3rem 1rem;
+        gap: 1.8rem;
+    }
+
+    .header-title {
+        font-size: 2.2rem;
+        line-height: 110%;
+    }
+
+    .header-text {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .button {
+        padding: 1rem 2rem;
+        color: var(--white);
+        font-size: 1rem;
+    }
+
+    .servicos {
+        padding: 3rem 1rem;
+        gap: 2rem;
+    }
+
+    .servicos-coluna {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .servicos-box {
+        gap: 0.8rem;
+    }
+
+    .servicos-text {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .servicos-title {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .conheca {
+        padding: 2rem 1.5rem 2rem 1.5rem;
+        background-image: none;
+    }
+
+    .conheca-box {
+        align-items: center;
+    }
+
+    .img-conheca {
+        height: 15rem;
+        overflow: hidden;
+    }
+
+    .conheca-img {
+        visibility: visible;
+        max-width: 100%;
+        display: block;
+        scale: 135%;
+    }
+
+    .conheca-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .conheca-text {
+        text-align: center;
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .faq {
+        padding: 3rem 2rem;
+    }
+
+    .faq-container {
+        width: 100%;
+    }
+
+    .faq-title {
+        font-size: 2rem;
+    }
+
+    .accordion {
+        font-size: 1.2rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .arrow {
+        margin-left: 0.2rem;
+    }
+
+    .panel {
+        font-size: 1rem;
+    }
+
+    .form {
+        padding: 2rem 2rem;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .form-title {
+        font-size: 2rem;
+        text-align: center;
+        line-height: 110%;
+    }
+
+    .input-box label {
+        font-size: 1rem;
+    }
+
+    .input-box input::placeholder {
+        font-size: 0.9rem;
+    }
+
+    .container-footer {
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .img-footer {
+        height: 3rem;
+    }
+
+    .text-footer {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .medias-footer {
+        text-align: center;
+    }
+
+    .icon-footer {
+        line-height: 1.5;
+        margin-right: 0.3rem;
+        font-size: 1rem
+    }
+
+    .medias-mobile {
+        font-size: 3rem;
+        margin: 0 1rem;
+    }
+
+    .servicos-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .contact {
+        align-items: center;
+    }
+}
